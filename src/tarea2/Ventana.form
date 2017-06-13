@@ -81,7 +81,7 @@
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Costo de la &#xa;Solucion:"/>
+            <Property name="text" type="java.lang.String" value="Permutaci&#xf3;n:&#xa;Costo de la soluci&#xf3;n:"/>
           </Properties>
         </Component>
       </SubComponents>

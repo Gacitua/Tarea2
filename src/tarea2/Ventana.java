@@ -57,7 +57,7 @@ public class Ventana extends javax.swing.JFrame {
 
         jtaCosto.setColumns(20);
         jtaCosto.setRows(5);
-        jtaCosto.setText("Costo de la \nSolucion:");
+        jtaCosto.setText("Permutación:\nCosto de la solución:");
         jScrollPane1.setViewportView(jtaCosto);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -99,22 +99,22 @@ public class Ventana extends javax.swing.JFrame {
             File f=fc.getSelectedFile();
             String args = f.getAbsolutePath();
             FileTSP.main(args);
-            int permutar = FileTSP.permutar();
-            jtaCosto.setText("Costo de la \n" +
-"Solucion: "+String.valueOf(permutar));            
+            String Per = FileTSP.permutar(0);
+            String Cost=FileTSP.permutar(1);
+            jtaCosto.setText("Permutación: "+Per+"\n"+"Costo de la solucion: "+Cost);            
         }
  
     }//GEN-LAST:event_jbAbrirActionPerformed
 
     private void jbPermutacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPermutacionActionPerformed
-            int permutar = FileTSP.permutar();
-            if (permutar==0){
+            String Per = FileTSP.permutar(0);
+            String Cost=FileTSP.permutar(1);
+            if ("0".equals(Cost)){
                 jtaCosto.setText("Cargue primero el archivo antes de generar una permutación");
                 
             }
             else{
-            jtaCosto.setText("Costo de la \n" +
-            "Solucion: "+String.valueOf(permutar));}
+            jtaCosto.setText("Permutación: "+Per+"\n"+"Costo de la solucion: "+Cost);}
     }//GEN-LAST:event_jbPermutacionActionPerformed
 
     /**

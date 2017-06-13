@@ -22,7 +22,7 @@ import static tarea2.FileTSP.permutar;
  */
 public class FileTSP {
 
-    private static int dimension;
+    static int dimension;
 
     
     private String name;
@@ -32,7 +32,7 @@ public class FileTSP {
     private String edgeWeightType;
     private String edgeWeightFormat;
     private String displayDataType;
-    private static int[][] edgWeightSection;
+    static int[][] edgWeightSection;
     private ArrayList<Nodo> displayDataSelection;
     /**
      * Constructor para guardar la informacion
@@ -122,7 +122,7 @@ public class FileTSP {
      * @return 
      ***************************/
     
-    public static int permutar(){
+    public static String permutar(int eleccion){
     
     
 
@@ -152,7 +152,10 @@ public class FileTSP {
         else{City2=a[0];}
         Costo=edgWeightSection[City1-1][City2-1]+Costo;
     }
-    return Costo;
+    String [] per_cost= new String[2];
+    per_cost[0]=Arrays.toString(a);
+    per_cost[1]=Integer.toString(Costo);
+    return per_cost[eleccion];
     }
     
     }
